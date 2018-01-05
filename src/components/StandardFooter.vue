@@ -18,8 +18,11 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-footer {
-  padding: 0px;
-}
+<style lang="sass">
+@import '../assets/sass/main.scss';
+
+.footer
+  padding: 0px
+  background-color: $background
+
 </style>

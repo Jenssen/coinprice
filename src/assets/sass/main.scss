@@ -2,13 +2,29 @@
 @import "~bulma/sass/utilities/initial-variables";
 @import "~bulma/sass/utilities/functions";
 
-// 2. Set your own initial variables
-// Add pink
+$primary: #007EA7;
+$border-color: #003459;
+
 $footer-background-color: #ffffff;
 
-// 3. Set the derived variables
-// Use the new pink as the primary color
-$primary: $grey;
+$background: #00171F;
+
+
+// Navbar
+$navbar-background-color: $background;
+$navbar-item-color: $white;
+$navbar-item-hover-color: $white;
+
+// Table
+$table-color: $white;
+$table-background-color: $background;
+$table-cell-heading-color: $white;
+$table-row-hover-background-color: #001f2a;
+$table-head-cell-color: $white;
+$table-foot-cell-color: $white;
+$table-cell-border-width: 0 0 0px;
+$table-head-cell-border-width: 0 0 1px;
+$table-cell-border: 0px solid $border-color;
 
 // 6. Import the rest of Bulma
 @import '~bulma'

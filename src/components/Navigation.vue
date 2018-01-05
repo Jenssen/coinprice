@@ -1,9 +1,9 @@
 <template>
     <!-- Hero head: will stick at the top -->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar">
       <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
-          Coin Price
+        <a class="navbar-item is-size-4" href="#">
+          Crypto Price Corrected
         </a>
       </div>
     </nav>
@@ -17,6 +17,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 
 </style>

@@ -12,4 +12,7 @@ export default {
 
 <style lang="sass">
 @import 'assets/sass/main.scss';
+
+body
+  background-color: $background
 </style>

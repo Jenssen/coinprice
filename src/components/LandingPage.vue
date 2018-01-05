@@ -1,9 +1,14 @@
 <template>
-  <div class="container">
+  <div class="container is-fluid">
 
     <navigation></navigation>
 
       <div class="container">
+        <nav class="level">
+          <p class="level-item has-text-centered is-size-2 has-text-white">
+            Show coin price if they had the same supply as Bitcoin.
+          </p>
+        </nav>
         <coin-list></coin-list>
       </div>
 
@@ -28,6 +33,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="sass">
 
 </style>
