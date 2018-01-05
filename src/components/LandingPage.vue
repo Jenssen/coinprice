@@ -1,33 +1,27 @@
 <template>
-  <section class="hero is-success is-fullheight">
-    <!-- Hero head: will stick at the top -->
+  <div class="container">
+
     <navigation></navigation>
 
-    <!-- Hero content: will be in the middle -->
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <h1 class="title">
-          Title
-        </h1>
-        <h2 class="subtitle">
-          Subtitle
-        </h2>
+      <div class="container">
+        <coin-list></coin-list>
       </div>
-    </div>
 
     <standard-footer></standard-footer>
 
-  </section>
+  </div>
 </template>
 
 <script>
 import Navigation from './Navigation'
 import StandardFooter from './StandardFooter'
+import CoinList from './CoinList'
 
 export default {
   components: {
     'navigation': Navigation,
-    'standard-footer': StandardFooter
+    'standard-footer': StandardFooter,
+    'coin-list': CoinList
   },
   name: 'LandingPage'
 }

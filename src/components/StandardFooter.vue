@@ -1,20 +1,13 @@
 <template>
 
   <!-- Hero footer: will stick at the bottom -->
-  <div class="hero-foot">
-    <nav class="tabs is-boxed is-fullwidth">
-      <div class="container">
-        <ul>
-          <li class="is-active"><a>Overview</a></li>
-          <li><a>Modifiers</a></li>
-          <li><a>Grid</a></li>
-          <li><a>Elements</a></li>
-          <li><a>Components</a></li>
-          <li><a>Layout</a></li>
-        </ul>
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        Made by Robert
       </div>
-    </nav>
-  </div>
+    </div>
+  </footer>
 
 </template>
 
@@ -26,5 +19,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+footer {
+  padding: 0px;
+}
 </style>
