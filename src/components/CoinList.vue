@@ -53,8 +53,24 @@
 <script>
 export default {
   name: 'CoinList',
+  data: function () {
+    return {
+      tickerData: ''
+    }
+  },
   created: function () {
-    console.log('skapad')
+    this.fetchData()
+  },
+  methods: {
+    fetchData: function () {
+      this.$http.get('https://api.coinmarketcap.com/v1/ticker/?limit=10')
+        .then(response => {
+          console.log(response)
+          this.tickerData = response
+        }, response => {
+          console.log('error')
+        })
+    }
   }
 }
 </script>
