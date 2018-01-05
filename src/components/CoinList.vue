@@ -1,7 +1,7 @@
 <template>
   <nav class="level">
     <p class="level-item has-text-centered">
-      <table class="table">
+      <table class="table is-hoverable">
         <thead>
           <tr>
             <th>Rank</th>
@@ -9,38 +9,11 @@
             <th>Price</th>
           </tr>
         </thead>
-        <tfoot>
-          <tr>
-            <th>Rank</th>
-            <th>Name</th>
-            <th>Price</th>
-          </tr>
-        </tfoot>
         <tbody>
-          <tr>
-            <th>1</th>
-            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C." title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong></td>
-            <td>38</td>
-          </tr>
-          <tr>
-            <th>1</th>
-            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C." title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong></td>
-            <td>38</td>
-          </tr>
-          <tr>
-            <th>1</th>
-            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C." title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong></td>
-            <td>38</td>
-          </tr>
-          <tr>
-            <th>1</th>
-            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C." title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong></td>
-            <td>38</td>
-          </tr>
-          <tr>
-            <th>1</th>
-            <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C." title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong></td>
-            <td>38</td>
+          <tr v-for="(coin, index) in coinList">
+            <th>{{ coin.rank }}</th>
+            <td>{{ coin.name }}</td>
+            <td>${{ coin.price }}</td>
           </tr>
         </tbody>
       </table>
@@ -51,11 +24,13 @@
 </template>
 
 <script>
+import ProcessResponse from './CoinList/ProcessResponse'
+
 export default {
   name: 'CoinList',
   data: function () {
     return {
-      tickerData: ''
+      coinList: ''
     }
   },
   created: function () {
@@ -63,10 +38,9 @@ export default {
   },
   methods: {
     fetchData: function () {
-      this.$http.get('https://api.coinmarketcap.com/v1/ticker/?limit=10')
+      this.$http.get('https://api.coinmarketcap.com/v1/ticker/?limit=30')
         .then(response => {
-          console.log(response)
-          this.tickerData = response
+          this.coinList = ProcessResponse.process(response)
         }, response => {
           console.log('error')
         })
