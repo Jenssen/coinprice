@@ -1,8 +1,13 @@
+var coinList = []
+var bitcoinSupply
+
 export default {
   process (response) {
-    var coinList = []
-    var bitcoinSupply = response.body[0].total_supply
+    if (response.body[0].id === 'bitcoin') {
+      bitcoinSupply = response.body[0].total_supply
+    }
 
+    console.log(response)
     var marketCap
     var adjustedPrice = 0
     for (var currency of response.body) {
