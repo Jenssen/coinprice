@@ -10,9 +10,6 @@ export default {
 }
 </script>
 
-<style lang="sass">
-@import 'assets/sass/main.scss';
+<style>
 
-body
-  background-color: $background
 </style>

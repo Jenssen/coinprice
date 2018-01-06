@@ -1,19 +1,16 @@
 <template>
   <div class="container is-fluid">
 
-    <navigation></navigation>
-
-      <div class="container">
-        <nav class="level">
-          <p class="level-item has-text-centered is-size-2 has-text-white">
-            Show coin price if they had the same supply as Bitcoin.
-          </p>
-        </nav>
+    <section class="section is-paddingless">
+      <div class="column is-8 is-offset-2">
+        <p class="description-text has-text-centered is-size-3 has-text-white">
+          Show coin price if they had the same supply as Bitcoin.
+        </p>
         <coin-list></coin-list>
       </div>
 
+    </section>
     <standard-footer></standard-footer>
-
   </div>
 </template>
 
@@ -33,6 +30,8 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="sass">
-
+<style>
+.description-text {
+  padding: 24px;
+}
 </style>
